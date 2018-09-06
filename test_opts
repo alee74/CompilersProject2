@@ -1,0 +1,14 @@
+./tools/AllocOne ./blocks/opt_tests/test_constant.i $1 4 ./tools/sim
+echo "	Worst: 20 ops/26 cycles. Best: 14 ops/26 cycles."
+echo
+
+./tools/AllocOne ./blocks/opt_tests/test_constant.i $1 5 ./tools/sim
+echo "	Worst: 16 ops/20 cycles. Best: 13 ops/15 cycles."
+echo
+
+./tools/AllocOne ./blocks/opt_tests/test_respill.i $1 4 ./tools/sim
+echo "	Worst: 40 ops/52 cycles. Best: 36 ops/48 cycles."
+echo
+
+./tools/AllocOne ./blocks/opt_tests/test_clean.i $1 6 ./tools/sim
+echo "	Worst: 38 ops/42 cycles. Best: 34 ops/38 cycles."

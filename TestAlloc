@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# This script runs all of the ILOC files in the current directory (./*.i)
+# through a register allocator; runs the resulting code through the ILOC
+# simulator; checks the output values against the specifications provided
+# in the comments of the original ILOC file; and reports both correctness
+# and the number of cycles required to execute the allocated code.
+#
+# usage: AllocAndRunAll <directory> <allocator> <k>
+#
+# where k is the number of registers to be passed to the allocator, default 5
+# 
+#
+DIR=$(pwd)
+CHECK=$(pwd)/tools/CheckResults
+SIM=$(pwd)/tools/sim
+RUN=$(pwd)/tools/AllocOne
+LOG=$(pwd)/tools/AllocTest.log
+if [ $# -lt 2 ]; then
+    echo "Usage: TestAlloc <allocator> <directory> <k>"
+    echo "Where <allocator> points to your allocator,"
+    echo '  <directory> points to a directory of test files.'
+    echo '  and <k> is the number of registers, default 5.'
+    exit
+fi
+ALLOC=$1
+DIR=$2
+NREGS=${3:-5}
+echo "Allocating and Testing ILOC Files"
+echo "in $DIR"
+echo " "
+echo "Using k = $NREGS"
+echo " "
+echo "-----" >&$LOG
+FLIST=$(ls $DIR/*.i)
+#
+for f in $(ls $DIR/*.i); do
+    $RUN $f $ALLOC $NREGS $SIM >> $LOG
+    echo "-----" >> $LOG
+done
+#
+
+$CHECK $LOG
+rm /tmp/test.i
