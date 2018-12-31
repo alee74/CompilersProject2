@@ -1,25 +1,49 @@
-# Makefile for Project One reference implemention.
+# # # # # # # # # # # # # # # # # # # # # # #
+#											#
+#	Makefile								#
+#											#
+#	Target Executable:		reader			#
+#											#
+#	File Dependecies:		main.cpp		#
+#							parser.h		#
+#							parser.cpp		#
+#							scanner.h		#
+#							scanner.cpp		#
+#											#
+#	Creates Object Files:	main.o			#
+#							parser.o		#
+#							scanner.o		#
+#											#
+#	Written by:	Austin James Lee			#
+#											#
+# # # # # # # # # # # # # # # # # # # # # # #
 
-CFLAGS=-Wall -O2
+OUT = alloc
+CFLAGS = -Wall -pedantic -O2 -std=$(CPP)
+CC = g++
+CPP = c++11
 
-alloc:		alloc.o lexing.o parsing.o 
-		gcc $(CFLAGS) -o alloc alloc.o lexing.o parsing.o
 
-alloc.o:	alloc.c lexing.h parsing.h alloc.h
-		gcc $(CFLAGS) -c alloc.c
+$(OUT):			scanner.o parser.o allocator.o main.o
+				$(CC) $(CFLAGS) -o $@ scanner.o parser.o allocator.o main.o
 
-parsing.o:	lexing.h parsing.c parsing.h
-		gcc $(CFLAGS) -c parsing.c
+main.o:			main.cpp
+				$(CC) $(CFLAGS) -c main.cpp
 
-lexing.o:	lexing.c lexing.h 
-		gcc $(CFLAGS) -c lexing.c
+allocator.o:	allocator.h allocator.cpp
+				$(CC) $(CFLAGS) -c allocator.cpp
+
+parser.o:		parser.h parser.cpp
+				$(CC) $(CFLAGS) -c parser.cpp
+
+scanner.o:		scanner.h scanner.cpp
+				$(CC) $(CFLAGS) -c scanner.cpp
+
+.PHONY:			clean
 
 clean:
-		rm *.o
-		rm alloc
+				rm *.o
+				rm $(OUT)
 
-wc:		
-		wc -l lexing.h lexing.c parsing.h parsing.c alloc.h alloc.c
-
-export:		lexing.c parsing.c alloc.c lexing.h parsing.h alloc.h Makefile README
-		tar cvf export.tar Makefile README *.c *.h 
+lines:
+				wc -l *.h *.cpp | grep total

@@ -1,0 +1,283 @@
+-----
+FILE: 'blocks//block01.i'
+INPUT: ' -i 128 8 12 5'
+EXPECTED OUTPUT: ' 68'
+
+68
+
+Executed 10 instructions and 10 operations in 14 cycles.
+-----
+FILE: 'blocks//block02.i'
+INPUT: ' '
+EXPECTED OUTPUT: ' 16'
+
+16
+
+Executed 13 instructions and 13 operations in 18 cycles.
+-----
+FILE: 'blocks//block03.i'
+INPUT: ' -i 1024 1 1'
+EXPECTED OUTPUT: ' 22 20 56 110'
+
+22
+20
+56
+110
+
+Executed 68 instructions and 68 operations in 78 cycles.
+-----
+FILE: 'blocks//block04.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 3 4 6 11'
+
+3
+4
+6
+11
+
+Executed 70 instructions and 70 operations in 82 cycles.
+-----
+FILE: 'blocks//block05.i'
+INPUT: ' -i 1024 1 1'
+EXPECTED OUTPUT: ' 12'
+
+12
+
+Executed 29 instructions and 29 operations in 39 cycles.
+-----
+FILE: 'blocks//block06.i'
+INPUT: ' -i 1024 1 1'
+EXPECTED OUTPUT: ' 12'
+
+12
+
+Executed 30 instructions and 30 operations in 33 cycles.
+-----
+FILE: 'blocks//block07.i'
+INPUT: ' -i 1024 0 1'
+EXPECTED OUTPUT: ' 0 1 1 2 3 5 8 13 21 34 55 89'
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+
+Executed 72 instructions and 72 operations in 72 cycles.
+-----
+FILE: 'blocks//block08.i'
+INPUT: ' -i 1024 0 1'
+EXPECTED OUTPUT: ' 0 1 1 2 3 5 8 13 21 34 55 89'
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+
+Executed 52 instructions and 52 operations in 52 cycles.
+-----
+FILE: 'blocks//block09.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 0 1 1 2 3 5 8 13 21 34 55'
+
+2000
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+Executed 80 instructions and 80 operations in 94 cycles.
+-----
+FILE: 'blocks//block1.i'
+INPUT: ' -i 1024 1 1'
+EXPECTED OUTPUT: ' 22 20 56 110'
+
+22
+20
+56
+110
+
+Executed 68 instructions and 68 operations in 78 cycles.
+-----
+FILE: 'blocks//block10.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 2 110'
+
+2
+110
+
+Executed 37 instructions and 37 operations in 40 cycles.
+-----
+FILE: 'blocks//block11.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 64'
+
+64
+
+Executed 47 instructions and 47 operations in 51 cycles.
+-----
+FILE: 'blocks//block12.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 131071 131071'
+
+131071
+131071
+
+Executed 140 instructions and 140 operations in 166 cycles.
+-----
+FILE: 'blocks//block13.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 131071 131071'
+
+131071
+131071
+
+Executed 45 instructions and 45 operations in 46 cycles.
+-----
+FILE: 'blocks//block14.i'
+INPUT: ' -i 2048 1 2 3 4 5 6 7 8 9 10'
+EXPECTED OUTPUT: ' 55 0 13'
+
+55
+0
+13
+
+Executed 122 instructions and 122 operations in 162 cycles.
+-----
+FILE: 'blocks//block15.i'
+INPUT: ' -i 2000 0 1 2 3 4 5'
+EXPECTED OUTPUT: ' 41'
+
+41
+
+Executed 71 instructions and 71 operations in 88 cycles.
+-----
+FILE: 'blocks//block16.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 64'
+
+64
+
+Executed 48 instructions and 48 operations in 52 cycles.
+-----
+FILE: 'blocks//block2.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 3 4 6 11'
+
+3
+4
+6
+11
+
+Executed 70 instructions and 70 operations in 82 cycles.
+-----
+FILE: 'blocks//block3.i'
+INPUT: ' -i 1024 1 1'
+EXPECTED OUTPUT: ' 12'
+
+12
+
+Executed 29 instructions and 29 operations in 39 cycles.
+-----
+FILE: 'blocks//block4.i'
+INPUT: ' -i 1024 1 1'
+EXPECTED OUTPUT: ' 12'
+
+12
+
+Executed 30 instructions and 30 operations in 33 cycles.
+-----
+FILE: 'blocks//block5.i'
+INPUT: ' -i 1024 0 1'
+EXPECTED OUTPUT: ' 0 1 1 2 3 5 8 13 21 34 55 89'
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+
+Executed 72 instructions and 72 operations in 72 cycles.
+-----
+FILE: 'blocks//block6.i'
+INPUT: ' -i 1024 0 1'
+EXPECTED OUTPUT: ' 0 1 1 2 3 5 8 13 21 34 55 89'
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+
+Executed 52 instructions and 52 operations in 52 cycles.
+-----
+FILE: 'blocks//block7.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 0 1 1 2 3 5 8 13 21 34 55'
+
+2000
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+Executed 80 instructions and 80 operations in 94 cycles.
+-----
+FILE: 'blocks//block8.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 2 110'
+
+2
+110
+
+Executed 37 instructions and 37 operations in 40 cycles.
+-----
+FILE: 'blocks//block9.i'
+INPUT: ''
+EXPECTED OUTPUT: ' 64'
+
+64
+
+Executed 47 instructions and 47 operations in 51 cycles.
+-----

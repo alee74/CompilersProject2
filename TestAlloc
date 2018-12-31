@@ -12,9 +12,9 @@
 # 
 #
 DIR=$(pwd)
-CHECK=$(pwd)/tools/CheckResults
-SIM=$(pwd)/tools/sim
-RUN=$(pwd)/tools/AllocOne
+CHECK=$(pwd)/tools/CheckResult_mac
+SIM=$(pwd)/tools/sim_mac
+RUN=$(pwd)/tools/AllocOne_mac
 LOG=$(pwd)/tools/AllocTest.log
 if [ $# -lt 2 ]; then
     echo "Usage: TestAlloc <allocator> <directory> <k>"
